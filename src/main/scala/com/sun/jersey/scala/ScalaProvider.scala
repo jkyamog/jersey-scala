@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.core.JsonProcessingException
+import com.fasterxml.jackson.databind.DeserializationFeature
 
 /**
  * This provider enables scala objects to be read and written by jersey.  This uses jackson's scala module
@@ -26,7 +27,8 @@ class ScalaProvider[A] extends AbstractMessageReaderWriterProvider[A] {
 
   private val jsonMapper = new ObjectMapper with ScalaObjectMapper
   jsonMapper.registerModule(DefaultScalaModule)
-	
+  jsonMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+  
   def readFrom(klass: Class[A],
                genericType: Type,
                annotations: Array[Annotation],

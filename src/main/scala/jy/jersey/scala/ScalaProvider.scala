@@ -1,4 +1,4 @@
-package com.sun.jersey.scala
+package jy.jersey.scala
 
 import javax.ws.rs.ext.Provider
 import com.sun.jersey.core.provider.AbstractMessageReaderWriterProvider

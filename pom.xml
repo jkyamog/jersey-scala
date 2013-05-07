@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sun.jersey</groupId>
+  <groupId>jy.jersey.scala</groupId>
   <artifactId>jersey-scala</artifactId>
-  <version>1.17</version>
+  <version>1.0</version>
   <name>${project.artifactId}</name>
   <description>A read write provider for scala objects. This is pretty much a copy of codahale's jersey-scala but using just jackson's scala module</description>
   <licenses>
@@ -16,7 +16,7 @@
     <maven.compiler.target>1.6</maven.compiler.target>
     <encoding>UTF-8</encoding>
     <scala.version>2.10.1</scala.version>
-    <jersey.version>${project.version}</jersey.version>
+    <jersey.version>1.17</jersey.version>
   </properties>
 
   <dependencies>
